@@ -1,25 +1,37 @@
 import React from "react";
 
-const Form = () => {
-    const handleSubmit = function (e) {
-        e.preventDefault();
-    }
-
+const Form = ({ values, onType, onSumbit }) => {
     return (
         <form>
             <label>Description</label>
-            <input type="text"></input>
+            <input 
+            name="itemDescription"
+            value={values.itemDescription}
+            type="text" 
+            onChange={onType}/>
 
             <label>Quantity</label>
-            <input type="text"></input>
+            <input 
+            name="quantity"
+            value={values.quantity}
+            type="number"
+            onChange={onType}/>
 
             <label>Location</label>
-            <input type="text"></input>
+            <input 
+            name="location"
+            value={values.location}
+            type="text"
+            onChange={onType}/>
 
             <label>Time</label>
-            <input type="text"></input>
+            <input 
+            name="time"
+            value={values.time}
+            type="text"
+            onChange={onType}/>
 
-            <button onClick={handleSubmit}>List item!</button>
+            <button onClick={onSumbit}>List item!</button>
         </form>
     )
 }
