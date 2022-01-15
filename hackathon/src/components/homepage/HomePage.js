@@ -1,15 +1,18 @@
 import react from 'react';
 import Form from './Form';
+import MarketListTable from './MarketListTable';
 
 const HomePage = () => {
-    const itemsList = [
-        {user: 'Danny Ngo', itemDescription: 'mattress', quantity: 10}
+    const tempItemsList = [
+        {user: 'Danny Ngo', itemDescription: 'mattress', quantity: 10, location: 'UNC', time: '9:00pm'}
     ]
+
+    const itemsList = react.useState(tempItemsList);
 
     return (
         <div>
         <h1>Home Page</h1>
-        <Form />
+        <MarketListTable list={tempItemsList}/>
     </div>
     )
 }
