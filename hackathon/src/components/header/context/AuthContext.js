@@ -14,10 +14,7 @@ export function AuthProvider({children}){
     return auth.createUserWithEmailAndPassword(email, password)
   }
   function login(email, password) {
-    return auth.signInWithEmailAndPassword(email, password)
-  }
-  function logout() {
-    return auth.signOut()
+    return auth.logInWithEmailAndPassword(email, password)
   }
 
   useEffect(() => {
@@ -31,11 +28,10 @@ export function AuthProvider({children}){
   const value = {
     currentUser,
     login,
-    signup,
-    logout
+    signup
   }
   return(
-    <AuthContext.Provider>
+    <AuthContext.Provider value={value}>
       {children}
     </AuthContext.Provider>
   )
