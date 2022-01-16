@@ -3,7 +3,6 @@ import '../../css/index.css';
 import { Row, Col } from 'react-bootstrap';
 import Filter from './Filter';
 import MarketListTable from './MarketListingsTable';
-import { tempItemsList } from '../mockdata';
 
 /**
  * Builds the homepage of the app.

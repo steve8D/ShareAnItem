@@ -20,18 +20,14 @@ const App = () => {
         const target = event.target;
         const value = target.value;
         const name = target.name;
-        console.log(value);
         setItem(state => ({ ...state, [name]:value}));
   }
 
   const handleSubmit = (event) => {
       event.preventDefault();
-
-      // modify the new item with id
       const newItem = {...item};
-      const newList = [...tempItemsList, newItem];
+      const newList = itemsList.concat(newItem);
       setItemsList(newList);
-      console.log(newList);
   }
 
   const handleItemTaken = (id) => {
