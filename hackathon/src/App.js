@@ -8,7 +8,7 @@ class App extends Component{
       {
         name: 'Potato',
         imgLink:'./potato.png',
-        desc:'I have this spare potato',
+        desc:"I have this spare potato",
         quantity: 2,
         time: '10:00',
         loc: 'Cafe'
