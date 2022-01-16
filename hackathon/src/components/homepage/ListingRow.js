@@ -1,6 +1,6 @@
 import React from "react";
 
-const ItemRow = ({ item }) => {
+const ListingRow = ({ item, onRemove }) => {
     return (
       <tr key={item.id}>
         <td>{item.id}</td>
@@ -8,8 +8,14 @@ const ItemRow = ({ item }) => {
         <td>{item.itemDescription}</td>
         <td>{item.quantity}</td>
         <td>{`${item.location} ${item.time}`}</td>
+        <td>
+          <button 
+          onClick={() => onRemove(item.id)}>
+            Reserve!
+          </button>
+        </td>
       </tr>
     );
 }
 
-export default ItemRow;
+export default ListingRow;

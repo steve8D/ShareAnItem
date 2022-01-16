@@ -1,6 +1,6 @@
 import react from 'react';
 import Form from './Form';
-import MarketListTable from './MarketListTable';
+import MarketListTable from './MarketListingsTable';
 
 const tempUsername = `steve8D`;
 let i = 4;
@@ -40,10 +40,8 @@ const HomePage = () => {
         setItemsList(newList);
     }
 
-    const handleRemove = (event, id) => {
-        event.preventDefault();
+    const handleRemove = (id) => {
         const newList = itemsList.filter((item) => item.id !== id);
-
         setItemsList(newList);
     }
 
@@ -53,7 +51,7 @@ const HomePage = () => {
         <Form values={item} onType={handleChange} onSumbit={handleSubmit}/>
 
         <br/>
-        <MarketListTable list={itemsList} />
+        <MarketListTable list={itemsList} removeItem={handleRemove}/>
     </div>
     )
 }

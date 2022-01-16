@@ -1,7 +1,7 @@
 import React from "react";
-import ItemRow from "./ItemRow";
+import ListingRow from "./ListingRow";
 
-const MarketListingsTable = ({ list }) => {
+const MarketListingsTable = ({ list, removeItem }) => {
     return (
         <table className="marketListingsTable">
           <thead className="marketListingsHeader">
@@ -14,7 +14,7 @@ const MarketListingsTable = ({ list }) => {
             </tr>
           </thead>
           <tbody className="marketListingsRows">
-              {list.map(item => <ItemRow key={item.id} item={item} />)}
+              {list.map(item => <ListingRow key={item.id} item={item} onRemove={removeItem}/>)}
           </tbody>
       </table>
     )
