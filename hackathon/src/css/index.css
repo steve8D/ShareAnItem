@@ -28,5 +28,17 @@
     cursor: pointer;
 }
 
+.homepage .filter-container {
+    align-items: center;
+    justify-content: center;
+}
+
+.homepage .filter-button {
+    float: right;
+    border-radius: 16px;
+    background-color: #344955;
+    color: white;   
+}
+
 
 
