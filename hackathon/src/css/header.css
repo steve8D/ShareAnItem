@@ -1,0 +1,31 @@
+.header {
+    background-color: white;
+    height: fit-content;
+    width: 100%;
+    padding: 9px 16px 8px 16px;
+}
+
+.header .app-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+}
+
+.header .search-bar {
+    border-radius: 6px;
+    border-color: rgb(219, 219, 219);
+    background-color: rgb(250, 250, 250);
+    height: 36px;
+}
+
+.header .icon-list {
+    padding-right: 12px;
+}
+
+@media screen and (max-width: 575px) {
+    .header .search-bar {
+        display: none;
+    }
+}
+    
