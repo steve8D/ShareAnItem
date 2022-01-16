@@ -5,21 +5,22 @@ import potato from '../potato.png';
 class ItemDescription extends Component{
 
     render(){
+        const {items, removeItem} = this.props;
         return(
             <Container>
-                <Row xs="auto" md={4} className="g-4">
-                {Array.from({ length: 16 }).map((_, idx) => (
+                <Row md={4} className="g-4">
+                {items.map((item, idx) => (
                     <Col>
                     <Card>
-                        <Card.Img variant="top" src = {potato}/>
+                        <Card.Img variant="top" src = {item.imgLink}/>
                         <Card.Body>
-                        <Card.Title>Card title</Card.Title>
+                        <Card.Title>{item.name}</Card.Title>
                         <Card.Text>
-                            This is a longer card with supporting text below as a natural
-                            lead-in to additional content. This content is a little bit longer.
+                            {item.desc}
                         </Card.Text>
+                        <Card.Footer>{item.loc} - {item.time}</Card.Footer>
                         </Card.Body>
-                        <Button>Take it</Button>
+                        <Button onClick={() => removeItem(idx)}>Take it</Button>
                     </Card>
                     </Col>
                 ))}
