@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Row, Col } from "react-bootstrap";
 import '../../css/header.css';
@@ -18,7 +19,7 @@ const HeaderIconList = () => {
                 <FunctionalIcon icon={Messenger} />
             </Col>
             <Col lg="1" sm="2" md="1" xs="2">
-                <FunctionalIcon icon={NewPosts} path="../homepage/Form"/>
+                <FunctionalIcon icon={NewPosts} path="/Form"/>
             </Col>
             <Col lg="1" sm="2" md="1" xs="2">
                 <FunctionalIcon icon={Like} />
@@ -30,11 +31,11 @@ const HeaderIconList = () => {
 class FunctionalIcon extends Component {
     render() {
         let iconSrc = this.props.icon;
-        let path = this.props.path;
+        let path = (this.props.path) ? this.props.path : '#';
         return (
-            <a href={path | '#'}>
+            <Link to={`${path}`}>
                 <img src={iconSrc}></img>
-            </a>
+            </Link>
         );
     };
 }
