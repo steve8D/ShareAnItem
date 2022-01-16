@@ -9,16 +9,10 @@ import { tempItemsList } from '../mockdata';
  * Builds the homepage of the app.
  * @returns Homepage component
  */
-const HomePage = () => {
-
-    const [itemsList, setItemsList] = React.useState(tempItemsList);
+const HomePage = ({list, onTaken}) => {
     const [filters, setFilters] = React.useState({
         category: "All",
     });
-
-    const handleItemTaken = (id) => {
-        setItemsList(currentList => currentList.filter((item) => item.id !== id));
-    }
 
     const filterListBasedOnCategory = (category, list) => {
         if (category === "All") {
@@ -42,7 +36,7 @@ const HomePage = () => {
                     <Filter className="filter-button" onChange={changeFilter} category={filters.category}></Filter>
                 </Col>
             </Row>
-            <MarketListTable items={filterListBasedOnCategory(filters.category, itemsList)} onTaken={handleItemTaken} />
+            <MarketListTable items={filterListBasedOnCategory(filters.category, list)} onTaken={onTaken} />
         </div>
     )
 }

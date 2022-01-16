@@ -22,23 +22,28 @@ const App = () => {
         const name = target.name;
         console.log(value);
         setItem(state => ({ ...state, [name]:value}));
-    }
+  }
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
+  const handleSubmit = (event) => {
+      event.preventDefault();
 
-        // modify the new item with id
-        const newItem = {...item};
-        const newList = [...tempItemsList, newItem];
-        setItemsList(newList);
-    }
+      // modify the new item with id
+      const newItem = {...item};
+      const newList = [...tempItemsList, newItem];
+      setItemsList(newList);
+      console.log(newList);
+  }
+
+  const handleItemTaken = (id) => {
+      setItemsList(currentList => currentList.filter((item) => item.id !== id));
+  }
 
   return (
     <>
       <Router>
         <Header/>
         <Routes>
-		      <Route exact path="/" element={<HomePage/>}/>
+		      <Route exact path="/" element={<HomePage list={itemsList} onTaken={handleItemTaken}/>}/>
 				  <Route exact path="/form" element={<Form values={item} onType={handleChange} onSumbit={handleSubmit}/>}/>
 	      </Routes>
       </Router>

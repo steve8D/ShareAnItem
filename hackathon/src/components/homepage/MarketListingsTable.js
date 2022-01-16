@@ -1,9 +1,7 @@
 import React, { Component, useState } from 'react';
 import { Col, Row, Card, Button, Modal, ListGroup, ListGroupItem } from 'react-bootstrap';
 
-class MarketListingsTable extends Component {
-  render() {
-    const { items, onTaken } = this.props;
+const MarketListsTable = ({ items, onTaken }) => {
     return (
       <Row className='g-3'>
         {items.map((item, idx) =>
@@ -13,7 +11,7 @@ class MarketListingsTable extends Component {
       </Row>
     )
   }
-}
+
 
 
 // Information card for each item
@@ -82,4 +80,4 @@ const ItemCard = (props) => {
 
 }
 
-export default MarketListingsTable;
+export default MarketListsTable;
