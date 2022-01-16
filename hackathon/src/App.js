@@ -1,10 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
+import defaultImageURI from './assets/images/potato.png';
+import { tempItemsList } from './components/mockdata';
 import Header from './components/header/Header';
 import HomePage from './components/homepage/HomePage';
 import Form from './components/Form';
-import { tempItemsList } from './components/mockdata';
 
 const App = () => {
   const [itemsList, setItemsList] = React.useState(tempItemsList);
@@ -13,7 +14,8 @@ const App = () => {
         itemDescription: '',
         quantity: 0,
         location: '',
-        time: ''
+        time: '',
+        imgLink: defaultImageURI
   })
 
   const handleChange = (event) => {

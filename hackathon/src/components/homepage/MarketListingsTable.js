@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 import { Col, Row, Card, Button, Modal, ListGroup, ListGroupItem } from 'react-bootstrap';
 
 const MarketListsTable = ({ items, onTaken }) => {
@@ -11,8 +11,6 @@ const MarketListsTable = ({ items, onTaken }) => {
       </Row>
     )
   }
-
-
 
 // Information card for each item
 const ItemCard = (props) => {
