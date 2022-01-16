@@ -1,4 +1,32 @@
 .homepage {
     padding: 16px 16px;
-
 }
+
+.homepage .sectionTitle {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.homepage .take-it-button {
+    width: 100%;
+    background-color: #344955;
+    color: white;
+}
+
+.take-it-modal-button {
+    background-color: #344955;
+    color: white;
+}
+.cancel-modal-button {
+    background-color: #af3535;
+    color: white;
+}
+
+
+.homepage .info-card:hover {
+    cursor: pointer;
+}
+
+
+
