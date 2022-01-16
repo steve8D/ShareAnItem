@@ -6,16 +6,14 @@ const MarketListsTable = ({ items, onTaken }) => {
       <Row className='g-3'>
         {items.map((item, idx) =>
           <Col xs="12" sm="6" md lg className='d-flex'>
-            <ItemCard item={item} onTaken={onTaken} idx={idx} />
+            <ItemCard key={item.id} item={item} onTaken={onTaken} idx={idx} />
           </Col>)}
       </Row>
     )
   }
 
 // Information card for each item
-const ItemCard = (props) => {
-  const { item, onTaken, idx } = props;
-
+const ItemCard = ({ item, onTaken, idx }) => {
   // Set states and get a handle to state change callbacks
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);

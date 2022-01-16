@@ -1,15 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.css';
 import defaultImageURI from './assets/images/potato.png';
 import { tempItemsList } from './components/mockdata';
 import Header from './components/header/Header';
 import HomePage from './components/homepage/HomePage';
 import Form from './components/Form';
 
+let i = 4;
 const App = () => {
   const [itemsList, setItemsList] = React.useState(tempItemsList);
   const [item, setItem] = React.useState({
+        id: i,
         user: 'guest',
         itemDescription: '',
         quantity: 0,
@@ -27,9 +28,10 @@ const App = () => {
 
   const handleSubmit = (event) => {
       event.preventDefault();
-      const newItem = {...item};
+      const newItem = {...item, id:i++};
       const newList = itemsList.concat(newItem);
       setItemsList(newList);
+      console.log(itemsList);
   }
 
   const handleItemTaken = (id) => {

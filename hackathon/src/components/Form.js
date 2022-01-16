@@ -31,6 +31,7 @@ const Form = ({ values, onType, onSumbit }) => {
             type="text"
             onChange={onType}/>
 
+            <br/>
             <button onClick={onSumbit}>List item!</button>
         </form>
     )
