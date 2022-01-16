@@ -10,7 +10,7 @@ import Like from '../../assets/Icons/Like.svg';
 class HeaderIconList extends Component {
     render() {
         return (
-            <Row>
+            <Row className="icon-list">
                 <Col lg="8" sm="4" md="8" xs="4"></Col>
                 <Col lg="1" sm="2" md="1" xs="2">
                     <FunctionalIcon icon={Home} path="/" />
