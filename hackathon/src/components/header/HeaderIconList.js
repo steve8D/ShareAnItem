@@ -31,7 +31,6 @@ class FunctionalIcon extends Component {
     render() {
         let iconSrc = this.props.icon;
         let path = this.props.path;
-        console.log(path);
         return (
             <a href={path | '#'}>
                 <img src={iconSrc}></img>

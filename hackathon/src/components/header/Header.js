@@ -9,7 +9,7 @@ import '../../css/header.css';
 /**
  * Top header for functional icons and search bar.
  */
-const Header = ({ handleChange }) => {
+const Header = () => {
     return (
         <div className="header">
             <Row>
