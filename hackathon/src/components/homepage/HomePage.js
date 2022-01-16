@@ -16,13 +16,8 @@ const HomePage = () => {
         category: "All",
     });
 
-    // Handle form submit (for removing item from current view & adding to user's list)
     const handleItemTaken = (id) => {
         setItemsList(currentList => currentList.filter((item) => item.id !== id));
-    }
-
-    const handleChange = (event) => {
-
     }
 
     const filterListBasedOnCategory = (category, list) => {
@@ -47,7 +42,6 @@ const HomePage = () => {
                     <Filter className="filter-button" onChange={changeFilter} category={filters.category}></Filter>
                 </Col>
             </Row>
-            {/* <Form value={item} onType={handleChange} /> */}
             <MarketListTable items={filterListBasedOnCategory(filters.category, itemsList)} onTaken={handleItemTaken} />
         </div>
     )
