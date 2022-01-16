@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Row, Col } from "react-bootstrap";
-import SearchBar from "./header/SearchBar";
-import HeaderIconList from "./header/HeaderIconList";
-import HeaderAppLogo from "./header/HeaderAppLogo";
-import '../css/header.css';
+import SearchBar from "./SearchBar";
+import HeaderIconList from "./HeaderIconList";
+import HeaderAppLogo from "./HeaderAppLogo";
+import '../../css/header.css';
 
 /**
  * Top header for functional icons and search bar.
