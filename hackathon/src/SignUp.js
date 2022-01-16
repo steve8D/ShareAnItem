@@ -46,7 +46,7 @@ export default function Signup(){
             </Card.Body>       
        </Card>
         <div>
-            Already have an account? <a href="./Login">Log In</a>
+            Already have an account? <Link to="./Login">Log In</Link>
         </div>
          </>
     )
