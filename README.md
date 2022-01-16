@@ -1,5 +1,8 @@
 # hackathon
 
+# For the Judges!
+Hi everyone, you can visit the website here: https://auth-dev-63bfb.web.app/
+
 ## How to run the project after cloning
 In your command console, do the following
 1. cd hackathon
