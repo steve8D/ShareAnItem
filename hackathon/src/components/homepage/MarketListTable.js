@@ -1,22 +1,23 @@
 import React from "react";
 import ItemRow from "./ItemRow";
 
-const MarketListTable = ({ list }) => {
+const MarketListingsTable = ({ list }) => {
     return (
-        <table>
-          <thead>
+        <table className="marketListingsTable">
+          <thead className="marketListingsHeader">
             <tr>
+              <th>User ID</th>
               <th>User</th>
               <th>Item Description</th>
               <th>Quantity</th>
               <th>Location and Time</th>
             </tr>
           </thead>
-          <tbody>
-              {list.map(item => <ItemRow item={item} />)}
+          <tbody className="marketListingsRows">
+              {list.map(item => <ItemRow key={item.id} item={item} />)}
           </tbody>
       </table>
     )
 }
 
-export default MarketListTable;
+export default MarketListingsTable;

@@ -2,7 +2,7 @@ import React from "react";
 
 const Form = ({ values, onType, onSumbit }) => {
     return (
-        <form>
+        <form className="itemListingForm">
             <label>Description</label>
             <input 
             name="itemDescription"

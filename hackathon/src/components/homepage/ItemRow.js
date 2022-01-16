@@ -2,7 +2,8 @@ import React from "react";
 
 const ItemRow = ({ item }) => {
     return (
-      <tr>
+      <tr key={item.id}>
+        <td>{item.id}</td>
         <td>{item.user}</td>
         <td>{item.itemDescription}</td>
         <td>{item.quantity}</td>
