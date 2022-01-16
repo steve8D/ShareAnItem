@@ -11,21 +11,3 @@
     color: #000;
     text-decoration: none;
 }
-
-.header .search-bar {
-    border-radius: 6px;
-    border-color: rgb(219, 219, 219);
-    background-color: rgb(250, 250, 250);
-    height: 36px;
-}
-
-.header .icon-list {
-    padding-right: 12px;
-}
-
-@media screen and (max-width: 575px) {
-    .header .search-bar {
-        display: none;
-    }
-}
-    
