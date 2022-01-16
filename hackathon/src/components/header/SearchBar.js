@@ -27,7 +27,7 @@ class SearchBar extends Component {
             <Form onSubmit={this.searchForItem}>
                 <FormControl className="search-bar"
                     name="searchText"
-                    placeholder="Search"
+                    placeholder="Search Marketplace"
                     type="text"
                 />
             </Form>
