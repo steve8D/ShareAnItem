@@ -4,7 +4,7 @@ import defaultImageURI from "./assets/images/potato.png";
 import { tempItemsList } from "./components/mockdata";
 import Header from "./components/header/Header";
 import HomePage from "./components/homepage/HomePage";
-import Form from "./components/Form";
+import UserForm from "./components/Form";
 
 let i = 4;
 const App = () => {
@@ -52,7 +52,7 @@ const App = () => {
             exact
             path="/form"
             element={
-              <Form
+              <UserForm
                 values={item}
                 onType={handleChange}
                 onSumbit={handleSubmit}

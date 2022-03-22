@@ -1,39 +1,60 @@
 import React from "react";
+import { Form, Button } from "react-bootstrap";
 
-const Form = ({ values, onType, onSumbit }) => {
+const UserForm = ({ values, onType, onSumbit }) => {
   return (
-    <form className="itemListingForm">
-      <label>Description</label>
-      <input
-        name="itemDescription"
+    <Form>
+      <Form.Group
         value={values.itemDescription}
-        type="text"
-        onChange={onType}
-      />
+        className="m-3"
+        controlId="formBasicDescription"
+      >
+        <Form.Label>Description</Form.Label>
+        <Form.Control
+          type="text"
+          placeholder="A Basic Description of Your Item"
+        />
+      </Form.Group>
 
-      <label>Quantity</label>
-      <input
-        name="quantity"
-        value={values.quantity}
-        type="number"
-        onChange={onType}
-      />
+      <Form.Group className="m-3" controlId="formBasicQuantity">
+        <Form.Label>Quantity</Form.Label>
+        <Form.Control
+          value={values.quantity}
+          type="text"
+          placeholder="How much of that item do you have?"
+        />
+      </Form.Group>
 
-      <label>Location</label>
-      <input
-        name="location"
+      <Form.Group
         value={values.location}
-        type="text"
-        onChange={onType}
-      />
+        className="m-3"
+        controlId="formBasicLocation"
+      >
+        <Form.Label>Location</Form.Label>
+        <Form.Control
+          type="text"
+          placeholder="Where do you want to meet (UBC Bus Loop, IKB Building, etc.)?"
+        />
+      </Form.Group>
 
-      <label>Time</label>
-      <input name="time" value={values.time} type="text" onChange={onType} />
-
-      <br />
-      <button onClick={onSumbit}>List item!</button>
-    </form>
+      <Form.Group className="m-3" controlId="formBasicTime">
+        <Form.Label>Time</Form.Label>
+        <Form.Control
+          value={values.time}
+          type="text"
+          placeholder="What time do you want to meet with the other student?"
+        />
+      </Form.Group>
+      <Button
+        className="m-3"
+        variant="primary"
+        type="submit"
+        onClick={onSumbit}
+      >
+        Submit
+      </Button>
+    </Form>
   );
 };
 
-export default Form;
+export default UserForm;
